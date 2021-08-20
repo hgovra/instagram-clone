@@ -18,10 +18,10 @@ export default function Routes() {
         <Stack.Screen
           name="Feed"
           component={Feed}
-          options={{
+          options={{headerShown: true,
             //headerTitle: () => <Header />,
             headerStyle: {
-              backgroundColor: 'gray',
+              backgroundColor: '#ffffff',
             },
           }}
         />

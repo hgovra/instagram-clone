@@ -6,6 +6,12 @@ export const Container = styled.View`
     height: 100%;
 `;
 
+export const Titulo = styled.Text`
+    font-family: ${'WorkSans_700Bold'};
+    font-size: 40px;
+    letter-spacing: -1.5px;
+`;
+
 export const HomeBackground = styled(LinearGradient).attrs({
     colors: ['#ac777b', '#5090a9'],
     start: {x: 0, y: 0},
