@@ -4982,11 +4982,6 @@ react-native-gesture-handler@^1.10.3:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-react-native-linear-gradient-degree@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-linear-gradient-degree/-/react-native-linear-gradient-degree-0.0.1.tgz#faae928107e6a4646833b458ab067d1483df9f1d"
-  integrity sha512-c099XLtAkqhjcBx2vsMmHP1iTt5IWzqa2Q59EtxGwm85o6jfDqCEsc2tQctBl/SQ73AsxY8Mx0A4Tj9kBe9mfw==
-
 react-native-safe-area-context@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz#06113c6b208f982d68ab5c3cebd199ca93db6941"

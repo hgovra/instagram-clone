@@ -7,7 +7,9 @@ export const Container = styled.View`
 `;
 
 export const HomeBackground = styled(LinearGradient).attrs({
-    colors: ['#ac777b', '#5090a9']
+    colors: ['#ac777b', '#5090a9'],
+    start: {x: 0, y: 0},
+    end: {x: 1, y: 0}
 })`
     flex: 1;
     justify-content: center;

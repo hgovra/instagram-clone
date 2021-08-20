@@ -45,6 +45,5 @@ An exercise in React Native development.
 ### Visual Effects 
 
 - expo-linear-gradient
-- react-native-linear-gradient-degree
 - expo-blur
 
