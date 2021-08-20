@@ -38,7 +38,9 @@ An exercise in React Native development.
   WorkSans_600SemiBold_Italic,
   WorkSans_700Bold_Italic,
   WorkSans_800ExtraBold_Italic,
-  WorkSans_900Black_Italic 
+  WorkSans_900Black_Italic
+
+  Icons: [https://icons.expo.fyi/](https://icons.expo.fyi/)
 
 ### Visual Effects 
 
