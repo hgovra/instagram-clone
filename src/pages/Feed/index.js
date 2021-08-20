@@ -1,36 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { ScrollView, FlatList } from "react-native";
 
-import { Text, View, StyleSheet } from 'react-native';
-import AppLoading from 'expo-app-loading';
+import { Feather } from "@expo/vector-icons";
 
-import { Feather } from '@expo/vector-icons';
+import { Container } from "./styles";
 
-import {
-  useFonts,
-  WorkSans_500Medium,
-  WorkSans_700Bold
-} from '@expo-google-fonts/work-sans';
-
-import { Container, HomeBackground, Titulo } from './styles';
+import Post from "../../components/Post";
+//<Feather name="camera" size={48} color="#e09b9c" />
 
 export default () => {
-  let [fontsLoaded] = useFonts({
-    WorkSans_500Medium,
-    WorkSans_700Bold
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  } else {
-    return (
-      <Container>
-        <HomeBackground >
-          <Titulo>
-            Instagram
-          </Titulo>
-          <Feather name="camera" size={48} color="#e09b9c" />
-        </HomeBackground>
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <ScrollView>
+        <Post />
+        <Post />
+      </ScrollView>
+    </Container>
+  );
 };

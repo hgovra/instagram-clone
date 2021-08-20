@@ -2,8 +2,10 @@ import styled from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export const Container = styled.View`
+    background: #f2f6f9;
     width: 100%;
     height: 100%;
+    overflow: scroll;
 `;
 
 export const Titulo = styled.Text`

@@ -1,31 +1,56 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from "react";
+import { SafeAreaView, StatusBar } from 'react-native';
+import AppLoading from 'expo-app-loading';
 
-import Feed from './pages/Feed';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-//import Header from './components/Header';
+import {
+  useFonts,
+  WorkSans_500Medium,
+  WorkSans_600SemiBold,
+  WorkSans_700Bold,
+} from "@expo-google-fonts/work-sans";
+
+import Feed from "./pages/Feed";
+import FeedHeader from "./components/FeedHeader";
 
 const Stack = createStackNavigator();
 
 export default function Routes() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-            headerShown: false
-        }}>
-        <Stack.Screen
-          name="Feed"
-          component={Feed}
-          options={{headerShown: true,
-            //headerTitle: () => <Header />,
-            headerStyle: {
-              backgroundColor: '#ffffff',
-            },
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  let [fontsLoaded] = useFonts({
+    WorkSans_500Medium,
+    WorkSans_600SemiBold,
+    WorkSans_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <SafeAreaView style={{flex: 1}}>
+        <StatusBar />
+
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              
+            }}
+          >
+            <Stack.Screen
+              name="Feed"
+              component={Feed}
+              options={{
+                header: () => <FeedHeader />,
+                headerStyle: {
+                  height: 170,
+                },
+                headerMode: 'float',
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
+    );
+  }
 }
